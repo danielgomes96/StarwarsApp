@@ -1,0 +1,7 @@
+include ':base'
+include ':character_details'
+include ':character_search'
+include ':domain'
+include ':data'
+include ':app'
+rootProject.name = "StarwarsApp"

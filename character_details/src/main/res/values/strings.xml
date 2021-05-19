@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="birthyear_text">Birthyear: %s</string>
+    <string name="character_details_header">Character Details</string>
+    <string name="planet_details_header">Planet Details</string>
+    <string name="species_details_header">Species Details</string>
+    <string name="films_list_header">Films List</string>
+
+    <string name="planet_name">Planet name: %s</string>
+    <string name="planet_population">Planet population: %s</string>
+
+    <string name="species_name">Species name: %s</string>
+    <string name="species_language">Species language: %s</string>
+
+    <string name="error_message">An error has occurred.</string>
+</resources>

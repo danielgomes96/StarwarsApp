@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/characterSearchFragment">
+
+    <fragment
+        android:id="@+id/characterSearchFragment"
+        android:name="com.daniel.character_search.CharacterSearchFragment"
+        android:label="CharacterSearchFragment"
+        app:moduleName="character_search">
+        <action
+            android:id="@+id/action_searchFragment_to_featureCharacterDetails"
+            app:enterAnim="@anim/fragment_enter"
+            app:exitAnim="@anim/fragment_exit"
+            app:popEnterAnim="@anim/fragment_pop_enter"
+            app:popExitAnim="@anim/fragment_pop_exit"
+            app:destination="@id/characterDetailsFragmentNavGraph">
+        </action>
+    </fragment>
+
+
+    <include-dynamic
+        android:id="@+id/characterDetailsFragmentNavGraph"
+        app:graphResName="feature_character_details_nav_graph"
+        app:moduleName="character_details">
+        <argument
+            android:name="characterProperties"
+            app:argType="com.daniel.domain.entity.Character" />
+    </include-dynamic>
+</navigation>

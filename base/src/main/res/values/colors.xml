@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="starwars_background_color">#fff</color>
+    <color name="default_text_color">#000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="toolbar_color">#15A567</color>
+    <color name="statusbar_color">#0D603C</color>
+    <color name="item_pressed_character_search">#D3D3D3</color>
+</resources>

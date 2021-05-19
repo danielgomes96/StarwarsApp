@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Margin Sizes -->
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+
+    <!-- Bottom sheet height -->
+    <dimen name="bottom_sheet_height">56dp</dimen>
+
+    <!-- Shimmer Layout Sizes -->
+    <dimen name="header_width">140dp</dimen>
+    <dimen name="header_height">30dp</dimen>
+    <dimen name="normal_text_width">90dp</dimen>
+    <dimen name="normal_text_height">20dp</dimen>
+
+    <!-- Dimensions for Chewbacca icon -->
+    <dimen name="height_60">60dp</dimen>
+    <dimen name="width_60">60dp</dimen>
+
+    <!-- Dimensions for Darth Vader and Yoda icon -->
+    <dimen name="height_40">40dp</dimen>
+    <dimen name="width_40">40dp</dimen>
+
+    <!-- Text Sizes -->
+    <dimen name="text_14">14sp</dimen>
+    <dimen name="text_16">16sp</dimen>
+    <dimen name="text_18">18sp</dimen>
+    <dimen name="text_20">20sp</dimen>
+</resources>

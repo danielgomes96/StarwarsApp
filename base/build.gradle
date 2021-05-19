@@ -1,0 +1,48 @@
+import com.daniel.buildSrc.Dependencies
+import com.daniel.buildSrc.Versions
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion Versions.compile_sdk
+    buildToolsVersion Versions.build_tools
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    defaultConfig {
+        minSdkVersion Versions.min_sdk
+        targetSdkVersion Versions.target_sdk
+        versionCode Versions.version_code
+        versionName Versions.version_name
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    kotlinOptions {
+        jvmTarget = Versions.jvm_target_version
+        freeCompilerArgs = ["-Xallow-result-return-type"]
+    }
+}
+
+dependencies {
+    implementation Dependencies.Core.lifecycle_common_java8
+    implementation Dependencies.Core.lifecycle_runtime
+    implementation Dependencies.Core.kotlin_coroutines_core
+    api Dependencies.DI.koin
+    api Dependencies.DI.koin_core
+    api Dependencies.DI.koin_view_model
+    api Dependencies.Core.navigation_dynamic_features
+    api Dependencies.Core.navigation_fragment
+    api Dependencies.Core.navigation_ui
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/shimmerContainer"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="@dimen/header_width"
+        android:layout_height="@dimen/header_height"
+        android:background="@color/grey"
+        android:textSize="@dimen/text_20"/>
+
+    <TextView
+        android:layout_width="@dimen/normal_text_width"
+        android:layout_height="@dimen/normal_text_height"
+        android:background="@color/grey"
+        android:layout_marginTop="@dimen/margin_16"
+        android:textSize="@dimen/text_20"/>
+
+    <TextView
+        android:layout_width="@dimen/normal_text_width"
+        android:layout_height="@dimen/normal_text_height"
+        android:background="@color/grey"
+        android:layout_marginTop="@dimen/margin_16"
+        android:textSize="@dimen/text_20"/>
+
+</LinearLayout>

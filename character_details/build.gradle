@@ -1,0 +1,42 @@
+import com.daniel.buildSrc.Dependencies
+import com.daniel.buildSrc.Versions
+
+apply plugin: "com.android.dynamic-feature"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+android {
+    compileSdkVersion Versions.compile_sdk
+    buildToolsVersion Versions.build_tools
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    defaultConfig {
+        minSdkVersion Versions.min_sdk
+        targetSdkVersion Versions.target_sdk
+        versionCode Versions.version_code
+        versionName Versions.version_name
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = Versions.jvm_target_version
+    }
+}
+
+dependencies {
+    implementation project(":app")
+    implementation Dependencies.UI.shimmer
+    testImplementation Dependencies.Test.junit
+    testImplementation Dependencies.Test.mockk
+    testImplementation Dependencies.Test.arch_core_test
+    testImplementation Dependencies.Test.kotest
+}

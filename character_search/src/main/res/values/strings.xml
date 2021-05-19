@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="toolbar_title">Starwars App</string>
+    <string name="empty_result_search_character">No results found.</string>
+    <string name="no_internet_connection">No internet connection available.</string>
+    <string name="response_error_message">Error %d : %s</string>
+    <string name="default_error_message">An error has occurred.</string>
+    <string name="error_try_again_message">Try again</string>
+    <string name="change_theme">Change theme</string>
+    <string name="welcome_text">Welcome to the Star wars App! You are on the bright side of the force!</string>
+</resources>

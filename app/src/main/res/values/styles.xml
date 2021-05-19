@@ -1,0 +1,26 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/toolbar_color</item>
+        <item name="colorPrimaryDark">@color/statusbar_color</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:editTextColor">@color/default_text_color</item>
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+    <style name="H1" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/raleway_font</item>
+        <item name="android:textSize">@dimen/text_20</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/default_text_color</item>
+    </style>
+
+    <style name="Normal" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/raleway_font</item>
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/default_text_color</item>
+    </style>
+
+</resources>

@@ -1,0 +1,45 @@
+import com.daniel.buildSrc.Dependencies
+import com.daniel.buildSrc.Versions
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion Versions.compile_sdk
+    buildToolsVersion Versions.build_tools
+
+    defaultConfig {
+        applicationId "com.daniel.starwarsapp"
+        minSdkVersion Versions.min_sdk
+        targetSdkVersion Versions.target_sdk
+        versionCode Versions.version_code
+        versionName Versions.version_name
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dynamicFeatures = [':character_search', ':character_details']
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    api project(':base')
+    api project(':data')
+    api project(':domain')
+    api Dependencies.Core.core_ktx
+    api Dependencies.UI.constraint_layout
+    api Dependencies.UI.material
+    api Dependencies.Core.appcompat
+}

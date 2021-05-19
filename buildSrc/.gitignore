@@ -1,0 +1,15 @@
+/build
+/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+/.gradle/noVersion/buildSrc.lock
+/.gradle/buildOutputCleanup/cache.properties
+/.gradle/5.6.4/executionHistory/executionHistory.bin
+/.gradle/5.6.4/executionHistory/executionHistory.lock
+/.gradle/6.5/executionHistory/executionHistory.lock
+/.gradle/5.6.4/fileContent/fileContent.lock
+/.gradle/5.6.4/fileHashes/fileHashes.lock
+/.gradle/5.6.4/gc.properties
+/.gradle/6.5/gc.properties
+/.gradle/vcs-1/gc.properties
+/.gradle/5.6.4/fileChanges/last-build.bin
+/.gradle/6.5/fileChanges/last-build.bin
+/.gradle/buildOutputCleanup/outputFiles.bin

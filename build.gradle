@@ -1,0 +1,34 @@
+import com.daniel.buildSrc.Dependencies
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    configurations {
+        ktlint
+    }
+    dependencies {
+        classpath Dependencies.Tool.gradle
+        classpath Dependencies.Tool.gradle_kotlin_plugin
+        classpath Dependencies.Tool.navigation_gradle_plugin
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+dependencies {
+    ktlint Dependencies.Tool.ktlint
+}
+
+task ktlint(type: JavaExec, group: "formatting") {
+    description = "Check Kotlin code style."
+    main = "com.pinterest.ktlint.Main"
+    classpath = configurations.ktlint
+    args "-F", "**/*.kt", "!**/bin/**/*.kt", "!**/*InstrumentedTest.kt", "--reporter=plain?group_by_file&color", "no-wildcard-imports = false"
+}

@@ -1,0 +1,11 @@
+import com.daniel.buildSrc.Dependencies
+
+apply plugin: 'kotlin'
+
+dependencies {
+    implementation Dependencies.Core.kotlin_stdlib_jdk8
+    implementation Dependencies.DI.koin_core
+    implementation Dependencies.Core.kotlin_coroutines_core
+    testImplementation Dependencies.Test.mockk
+    testImplementation Dependencies.Test.junit
+}

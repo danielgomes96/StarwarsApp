@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Starwars App</string>
+    <string name="title_character_search">Character Search</string>
+    <string name="title_character_details">Character Details</string>
+</resources>

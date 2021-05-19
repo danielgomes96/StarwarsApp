@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_character_search_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/starwars_background_color">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_color"
+        app:titleTextColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            app:searchIcon="@drawable/ic_search"
+            app:closeIcon="@drawable/ic_close"
+            app:iconifiedByDefault="false"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchView" />
+
+        <include
+            android:id="@+id/initialView"
+            layout="@layout/initial_state_character_search" />
+
+        <include
+            android:id="@+id/emptyView"
+            android:visibility="gone"
+            layout="@layout/empty_character_search" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/characterListRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/textViewChangeTheme"
+        app:layout_constraintTop_toBottomOf="@id/searchView" />
+
+    <TextView
+        android:id="@+id/textViewChangeTheme"
+        style="@style/Normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_16"
+        android:text="@string/change_theme"
+        android:textColor="@color/default_text_color"
+        app:layout_constraintBottom_toTopOf="@id/switch_theme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/darth_vader"
+        android:layout_width="@dimen/width_40"
+        android:layout_height="@dimen/height_40"
+        android:src="@drawable/ic_darthvader_theme"
+        app:layout_constraintBottom_toBottomOf="@id/switch_theme"
+        app:layout_constraintStart_toEndOf="@id/switch_theme"
+        app:layout_constraintTop_toTopOf="@id/switch_theme"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/yoda"
+        android:layout_width="@dimen/width_40"
+        android:layout_height="@dimen/height_40"
+        android:src="@drawable/ic_yoda_theme"
+        app:layout_constraintBottom_toBottomOf="@id/switch_theme"
+        app:layout_constraintEnd_toStartOf="@id/switch_theme"
+        app:layout_constraintTop_toTopOf="@id/switch_theme"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
